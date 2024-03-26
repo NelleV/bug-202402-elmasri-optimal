@@ -13,7 +13,7 @@
 <meta name="keywords" content="Rare event simulation, Parameter estimation, Importance sampling, Dimension reduction, Kullback–Leibler divergence, Projection">
 <meta name="description" content="This document provides a dimension-reduction strategy in order to improve the performance of importance sampling in high dimensions.">
 
-<title>Optimal projection for parametric importance sampling in high dimensions</title>
+<title>BUG Optimal projection for parametric importance sampling in high dimensions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -167,7 +167,7 @@ window.Quarto = {
     <div class="quarto-title column-body">
       <div class="quarto-title-block"><div><h1 class="title"><a href="https://computo.sfds.asso.fr">
         <img src="https://computo.sfds.asso.fr/assets/img/logo_notext_white.png" height="60px">
-      </a> &nbsp; Optimal projection for parametric importance sampling in high dimensions</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> source</button></div></div>
+      </a> &nbsp; BUG Optimal projection for parametric importance sampling in high dimensions</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> source</button></div></div>
             <p><a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons BY License"></a>
 ISSN 2824-7795</p>
             <div>
@@ -741,10 +741,11 @@ Figure&nbsp;2: Partial KL divergence and spectrum for the function <span class="
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>Markdown(tabulate(</span>
 <span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  table, </span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">""</span>, <span class="vs">r"$\mathbf{\Sigma}^*$"</span>, <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^*$"</span>, <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_</span><span class="sc">{opt}</span><span class="vs">$"</span>,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_\text</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="vs">r"${\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{opt}</span><span class="vs">}$"</span>,</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="st">"vMFN"</span>],</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    tablefmt<span class="op">=</span><span class="st">"pipe"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">""</span>, <span class="vs">r"$\mathbf{\Sigma}^*$"</span>, <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^*$"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>       <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_</span><span class="sc">{opt}</span><span class="vs">$"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_\text</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="vs">r"${\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{opt}</span><span class="vs">}$"</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="st">"vMFN"</span>],</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  tablefmt<span class="op">=</span><span class="st">"latex"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="tbl-sum" class="cell quarto-float anchored" data-execution_count="3">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -753,62 +754,7 @@ Table&nbsp;2: Numerical comparison of the estimation of <span class="math inline
 </figcaption>
 <div aria-describedby="tbl-sum-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
-<table class="do-not-create-environment cell table table-sm table-striped small">
-<colgroup>
-<col style="width: 11%">
-<col style="width: 8%">
-<col style="width: 12%">
-<col style="width: 14%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 3%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;"><span class="math inline">\mathbf{\Sigma}^*</span></th>
-<th style="text-align: right;"><span class="math inline">\widehat{\mathbf{\Sigma}}^*</span></th>
-<th style="text-align: right;"><span class="math inline">\widehat{\mathbf{\Sigma}}_{opt}</span></th>
-<th style="text-align: right;"><span class="math inline">\widehat{\mathbf{\Sigma}}_\text{mean}</span></th>
-<th style="text-align: right;"><span class="math inline">{\widehat{\mathbf{\Sigma}}^{+d}_{opt}}</span></th>
-<th style="text-align: right;"><span class="math inline">\widehat{\mathbf{\Sigma}}^{+d}_{mean}</span></th>
-<th style="text-align: left;">vMFN</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">D’</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">/</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Relative error (%)</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">0.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Coefficient of variation (%)</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">0.0</td>
-</tr>
-</tbody>
-</table>
+
 </div>
 </div>
 </figure>
@@ -921,8 +867,8 @@ Uribe, Felipe, Iason Papaioannou, Youssef M. Marzouk, and Daniel Straub. 2021. <
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@article{el masri2024,
   author = {El Masri, Maxime and Morio, Jérôme and Simatos, Florian},
   publisher = {French Statistical Society},
-  title = {Optimal Projection for Parametric Importance Sampling in High
-    Dimensions},
+  title = {BUG {Optimal} Projection for Parametric Importance Sampling
+    in High Dimensions},
   journal = {Computo},
   date = {2024-11-03},
   url = {https://computo.sfds.asso.fr/published-202402-elmasri-optimal/},
@@ -946,8 +892,8 @@ Uribe, Felipe, Iason Papaioannou, Youssef M. Marzouk, and Daniel Straub. 2021. <
     adaptive importance sampling schemes.}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-el masri2024" class="csl-entry quarto-appendix-citeas" role="listitem">
-El Masri, Maxime, Jérôme Morio, and Florian Simatos. 2024.
-<span>“Optimal Projection for Parametric Importance Sampling in High
+El Masri, Maxime, Jérôme Morio, and Florian Simatos. 2024. <span>“BUG
+Optimal Projection for Parametric Importance Sampling in High
 Dimensions.”</span> <em>Computo</em>, November. <a href="https://doi.org/10.57750/jjza-6j82">https://doi.org/10.57750/jjza-6j82</a>.
 </div></div></section></div></main>
 <!-- /main column -->
@@ -1417,7 +1363,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Optimal projection for parametric importance sampling in high dimensions</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> BUG Optimal projection for parametric importance sampling in high dimensions</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Maxime El Masri</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation: '[ONERA/DTIS](https://www.onera.fr/), [ISAE-SUPAERO](https://www.isae-supaero.fr/), [Université de Toulouse](https://www.univ-toulouse.fr/)'</span></span>
@@ -1902,47 +1848,48 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-490"><a href="#cb4-490" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-491"><a href="#cb4-491" aria-hidden="true" tabindex="-1"></a>Markdown(tabulate(</span>
 <span id="cb4-492"><a href="#cb4-492" aria-hidden="true" tabindex="-1"></a>  table, </span>
-<span id="cb4-493"><a href="#cb4-493" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">""</span>, <span class="vs">r"$\mathbf{\Sigma}^*$"</span>, <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^*$"</span>, <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_</span><span class="sc">{opt}</span><span class="vs">$"</span>,</span>
-<span id="cb4-494"><a href="#cb4-494" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_\text</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="vs">r"${\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{opt}</span><span class="vs">}$"</span>,</span>
-<span id="cb4-495"><a href="#cb4-495" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="st">"vMFN"</span>],</span>
-<span id="cb4-496"><a href="#cb4-496" aria-hidden="true" tabindex="-1"></a>    tablefmt<span class="op">=</span><span class="st">"pipe"</span>))</span>
-<span id="cb4-497"><a href="#cb4-497" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-498"><a href="#cb4-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-499"><a href="#cb4-499" aria-hidden="true" tabindex="-1"></a><span class="fu">##  Test case 2: projection in 2 directions   {#sec-sub:parabol}    </span></span>
-<span id="cb4-500"><a href="#cb4-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-501"><a href="#cb4-501" aria-hidden="true" tabindex="-1"></a>The second test case is again a probability estimation, i.e., it is of the form $\phi = \mathbb{I}_{<span class="sc">\{</span>\varphi \geq 0<span class="sc">\}</span>}$ with now the function $\varphi$ having some quadratic terms:</span>
-<span id="cb4-502"><a href="#cb4-502" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb4-503"><a href="#cb4-503" aria-hidden="true" tabindex="-1"></a>    \varphi: \mathbf{x}=(x_1,\ldots,x_n) \in \mathbb{R}^n \mapsto x_1 - 25 x_2^2 - 30 x_3^2 - 1.</span>
-<span id="cb4-504"><a href="#cb4-504" aria-hidden="true" tabindex="-1"></a>$$ {#eq-parabol}</span>
-<span id="cb4-505"><a href="#cb4-505" aria-hidden="true" tabindex="-1"></a>        The quantity of interest $\mathcal{E}$ is defined as $\mathcal{E}=\int_{\mathbb{R}^n} \phi(\mathbf{x}) f(\mathbf{x}) \textrm{d}\mathbf{x} = \mathbb{P}_f(\varphi(\mathbf{X})\geq 0)$ for all $n$ where the density $f$ is the standard $n$-dimensional Gaussian distribution. This function is motivated in part because $\mathbf{m}^*$ and $\mathbf{d}^*_1$ are different and also because Algorithm 2 chooses two projection directions. Thus, this is an example where ${\widehat{\mathbf{\Sigma}}^{\text{}}_\text{mean}}$ and ${\widehat{\mathbf{\Sigma}}^{\text{}}_\text{opt}}$ are significantly different.</span>
-<span id="cb4-506"><a href="#cb4-506" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-507"><a href="#cb4-507" aria-hidden="true" tabindex="-1"></a><span class="fu">###  Evolution of the partial KL divergence and spectrum</span></span>
-<span id="cb4-508"><a href="#cb4-508" aria-hidden="true" tabindex="-1"></a>We check on @fig-inefficiency-parab-1 that the partial KL divergence obeys the same behavior as for the previous example, namely the one associated with $\widehat{\mathbf{\Sigma}}^*$ increases much faster than the ones associated with $\mathbf{\Sigma}^*$ and $\widehat{\mathbf{\Sigma}}^*_k$, which again suggests that projecting can improve the situation. Since the function $\varphi$ only depends on the first three variables and is even in $x_2$ and $x_3$, one gets that $\mathbf{m}^* = \alpha </span>
-<span id="cb4-509"><a href="#cb4-509" aria-hidden="true" tabindex="-1"></a>    \textbf{e}_1$ with $\alpha = \mathbb{E}(X_1 \mid X_1 \geq 25 X^2_2 + 30 X^2_3 + 1) \approx 1.9$ (here and in the sequel, $\textbf{e}_i$ denotes the $i$th canonical vector of $\mathbb{R}^n$, i.e., all its coordinates are $0$ except the $i$-th one which is equal to one), and that $\mathbf{\Sigma}^*$ is diagonal with</span>
-<span id="cb4-510"><a href="#cb4-510" aria-hidden="true" tabindex="-1"></a>$$ \mathbf{\Sigma}^* =</span>
-<span id="cb4-511"><a href="#cb4-511" aria-hidden="true" tabindex="-1"></a>    \begin{pmatrix}</span>
-<span id="cb4-512"><a href="#cb4-512" aria-hidden="true" tabindex="-1"></a>    \lambda_1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
-<span id="cb4-513"><a href="#cb4-513" aria-hidden="true" tabindex="-1"></a>    0 &amp; \lambda_2 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
-<span id="cb4-514"><a href="#cb4-514" aria-hidden="true" tabindex="-1"></a>    0 &amp; 0 &amp; \lambda_3 &amp; 0 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
-<span id="cb4-515"><a href="#cb4-515" aria-hidden="true" tabindex="-1"></a>    0 &amp; 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
-<span id="cb4-516"><a href="#cb4-516" aria-hidden="true" tabindex="-1"></a>    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots <span class="sc">\\</span></span>
-<span id="cb4-517"><a href="#cb4-517" aria-hidden="true" tabindex="-1"></a>    0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 <span class="sc">\\</span></span>
-<span id="cb4-518"><a href="#cb4-518" aria-hidden="true" tabindex="-1"></a>    \end{pmatrix}. </span>
-<span id="cb4-519"><a href="#cb4-519" aria-hidden="true" tabindex="-1"></a> $$</span>
-<span id="cb4-520"><a href="#cb4-520" aria-hidden="true" tabindex="-1"></a>Note that the off-diagonal elements of the submatrix $(\mathbf{\Sigma}^*_{ij})_{1 \leq i, j \leq 3}$ are indeed $0$ since they result from integrating an odd function of an odd random variable with an even conditioning. For instance, if $F(x) = \mathbb{P}(30 X^2_3 + 1 \leq x)$, then by conditioning on $(X_1, X_3)$ we obtain</span>
-<span id="cb4-521"><a href="#cb4-521" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb4-522"><a href="#cb4-522" aria-hidden="true" tabindex="-1"></a>    \mathbf{\Sigma}^*_{12} = \mathbb{E} \left( (X_1 - \alpha) X_2 \mid X_1 - 25 X_2^2 \geq 30 X^2_3 + 1 \right)<span class="sc">\\</span></span>
-<span id="cb4-523"><a href="#cb4-523" aria-hidden="true" tabindex="-1"></a>     = \frac{1}{\mathcal{E}} \mathbb{E} \left<span class="co">[</span><span class="ot"> (X_1 - \alpha) \mathbb{E} \left( X_2 F(X_1 - 25 X^2_2) \mid X_1 \right) \right</span><span class="co">]</span></span>
-<span id="cb4-524"><a href="#cb4-524" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb4-525"><a href="#cb4-525" aria-hidden="true" tabindex="-1"></a>    which is $0$ as $x_2 F(x_1 - x^2_2)$ is an odd function of $x_2$ for fixed $x_1$, and $X_2$ has an even density. </span>
-<span id="cb4-526"><a href="#cb4-526" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-527"><a href="#cb4-527" aria-hidden="true" tabindex="-1"></a>We can numerically compute $\lambda_1 \approx 0.28$, $\lambda_2 \approx 0.009$ and $\lambda_3 \approx 0.008$. These values correspond to the red squares in @fig-inefficiency-parab-2 which shows that the smallest eigenvalues are properly estimated. Moreover, Algorithm 2 selects the two largest eigenvalues, which have the highest $\ell$-values. These two eigenvalues thus correspond to the eigenvectors $\mathbf{e}_2$ and $\mathbf{e}_3$, and so we see that on this example, the optimal directions predicted by @thm-thm1 are significantly different (actually, orthogonal) from $\mathbf{m}^*$ which is proportional to $\textbf{e}_1$.</span>
-<span id="cb4-528"><a href="#cb4-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-493"><a href="#cb4-493" aria-hidden="true" tabindex="-1"></a>  headers<span class="op">=</span>[<span class="st">""</span>, <span class="vs">r"$\mathbf{\Sigma}^*$"</span>, <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^*$"</span>,</span>
+<span id="cb4-494"><a href="#cb4-494" aria-hidden="true" tabindex="-1"></a>       <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_</span><span class="sc">{opt}</span><span class="vs">$"</span>,</span>
+<span id="cb4-495"><a href="#cb4-495" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">_\text</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="vs">r"${\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{opt}</span><span class="vs">}$"</span>,</span>
+<span id="cb4-496"><a href="#cb4-496" aria-hidden="true" tabindex="-1"></a>           <span class="vs">r"$\widehat{\mathbf{\Sigma</span><span class="sc">}}</span><span class="vs">^{+d}_</span><span class="sc">{mean}</span><span class="vs">$"</span>, <span class="st">"vMFN"</span>],</span>
+<span id="cb4-497"><a href="#cb4-497" aria-hidden="true" tabindex="-1"></a>  tablefmt<span class="op">=</span><span class="st">"latex"</span>))</span>
+<span id="cb4-498"><a href="#cb4-498" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-499"><a href="#cb4-499" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-500"><a href="#cb4-500" aria-hidden="true" tabindex="-1"></a><span class="fu">##  Test case 2: projection in 2 directions   {#sec-sub:parabol}    </span></span>
+<span id="cb4-501"><a href="#cb4-501" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-502"><a href="#cb4-502" aria-hidden="true" tabindex="-1"></a>The second test case is again a probability estimation, i.e., it is of the form $\phi = \mathbb{I}_{<span class="sc">\{</span>\varphi \geq 0<span class="sc">\}</span>}$ with now the function $\varphi$ having some quadratic terms:</span>
+<span id="cb4-503"><a href="#cb4-503" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb4-504"><a href="#cb4-504" aria-hidden="true" tabindex="-1"></a>    \varphi: \mathbf{x}=(x_1,\ldots,x_n) \in \mathbb{R}^n \mapsto x_1 - 25 x_2^2 - 30 x_3^2 - 1.</span>
+<span id="cb4-505"><a href="#cb4-505" aria-hidden="true" tabindex="-1"></a>$$ {#eq-parabol}</span>
+<span id="cb4-506"><a href="#cb4-506" aria-hidden="true" tabindex="-1"></a>        The quantity of interest $\mathcal{E}$ is defined as $\mathcal{E}=\int_{\mathbb{R}^n} \phi(\mathbf{x}) f(\mathbf{x}) \textrm{d}\mathbf{x} = \mathbb{P}_f(\varphi(\mathbf{X})\geq 0)$ for all $n$ where the density $f$ is the standard $n$-dimensional Gaussian distribution. This function is motivated in part because $\mathbf{m}^*$ and $\mathbf{d}^*_1$ are different and also because Algorithm 2 chooses two projection directions. Thus, this is an example where ${\widehat{\mathbf{\Sigma}}^{\text{}}_\text{mean}}$ and ${\widehat{\mathbf{\Sigma}}^{\text{}}_\text{opt}}$ are significantly different.</span>
+<span id="cb4-507"><a href="#cb4-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-508"><a href="#cb4-508" aria-hidden="true" tabindex="-1"></a><span class="fu">###  Evolution of the partial KL divergence and spectrum</span></span>
+<span id="cb4-509"><a href="#cb4-509" aria-hidden="true" tabindex="-1"></a>We check on @fig-inefficiency-parab-1 that the partial KL divergence obeys the same behavior as for the previous example, namely the one associated with $\widehat{\mathbf{\Sigma}}^*$ increases much faster than the ones associated with $\mathbf{\Sigma}^*$ and $\widehat{\mathbf{\Sigma}}^*_k$, which again suggests that projecting can improve the situation. Since the function $\varphi$ only depends on the first three variables and is even in $x_2$ and $x_3$, one gets that $\mathbf{m}^* = \alpha </span>
+<span id="cb4-510"><a href="#cb4-510" aria-hidden="true" tabindex="-1"></a>    \textbf{e}_1$ with $\alpha = \mathbb{E}(X_1 \mid X_1 \geq 25 X^2_2 + 30 X^2_3 + 1) \approx 1.9$ (here and in the sequel, $\textbf{e}_i$ denotes the $i$th canonical vector of $\mathbb{R}^n$, i.e., all its coordinates are $0$ except the $i$-th one which is equal to one), and that $\mathbf{\Sigma}^*$ is diagonal with</span>
+<span id="cb4-511"><a href="#cb4-511" aria-hidden="true" tabindex="-1"></a>$$ \mathbf{\Sigma}^* =</span>
+<span id="cb4-512"><a href="#cb4-512" aria-hidden="true" tabindex="-1"></a>    \begin{pmatrix}</span>
+<span id="cb4-513"><a href="#cb4-513" aria-hidden="true" tabindex="-1"></a>    \lambda_1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
+<span id="cb4-514"><a href="#cb4-514" aria-hidden="true" tabindex="-1"></a>    0 &amp; \lambda_2 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
+<span id="cb4-515"><a href="#cb4-515" aria-hidden="true" tabindex="-1"></a>    0 &amp; 0 &amp; \lambda_3 &amp; 0 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
+<span id="cb4-516"><a href="#cb4-516" aria-hidden="true" tabindex="-1"></a>    0 &amp; 0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 <span class="sc">\\</span></span>
+<span id="cb4-517"><a href="#cb4-517" aria-hidden="true" tabindex="-1"></a>    \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots <span class="sc">\\</span></span>
+<span id="cb4-518"><a href="#cb4-518" aria-hidden="true" tabindex="-1"></a>    0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 1 <span class="sc">\\</span></span>
+<span id="cb4-519"><a href="#cb4-519" aria-hidden="true" tabindex="-1"></a>    \end{pmatrix}. </span>
+<span id="cb4-520"><a href="#cb4-520" aria-hidden="true" tabindex="-1"></a> $$</span>
+<span id="cb4-521"><a href="#cb4-521" aria-hidden="true" tabindex="-1"></a>Note that the off-diagonal elements of the submatrix $(\mathbf{\Sigma}^*_{ij})_{1 \leq i, j \leq 3}$ are indeed $0$ since they result from integrating an odd function of an odd random variable with an even conditioning. For instance, if $F(x) = \mathbb{P}(30 X^2_3 + 1 \leq x)$, then by conditioning on $(X_1, X_3)$ we obtain</span>
+<span id="cb4-522"><a href="#cb4-522" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb4-523"><a href="#cb4-523" aria-hidden="true" tabindex="-1"></a>    \mathbf{\Sigma}^*_{12} = \mathbb{E} \left( (X_1 - \alpha) X_2 \mid X_1 - 25 X_2^2 \geq 30 X^2_3 + 1 \right)<span class="sc">\\</span></span>
+<span id="cb4-524"><a href="#cb4-524" aria-hidden="true" tabindex="-1"></a>     = \frac{1}{\mathcal{E}} \mathbb{E} \left<span class="co">[</span><span class="ot"> (X_1 - \alpha) \mathbb{E} \left( X_2 F(X_1 - 25 X^2_2) \mid X_1 \right) \right</span><span class="co">]</span></span>
+<span id="cb4-525"><a href="#cb4-525" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb4-526"><a href="#cb4-526" aria-hidden="true" tabindex="-1"></a>    which is $0$ as $x_2 F(x_1 - x^2_2)$ is an odd function of $x_2$ for fixed $x_1$, and $X_2$ has an even density. </span>
+<span id="cb4-527"><a href="#cb4-527" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-528"><a href="#cb4-528" aria-hidden="true" tabindex="-1"></a>We can numerically compute $\lambda_1 \approx 0.28$, $\lambda_2 \approx 0.009$ and $\lambda_3 \approx 0.008$. These values correspond to the red squares in @fig-inefficiency-parab-2 which shows that the smallest eigenvalues are properly estimated. Moreover, Algorithm 2 selects the two largest eigenvalues, which have the highest $\ell$-values. These two eigenvalues thus correspond to the eigenvectors $\mathbf{e}_2$ and $\mathbf{e}_3$, and so we see that on this example, the optimal directions predicted by @thm-thm1 are significantly different (actually, orthogonal) from $\mathbf{m}^*$ which is proportional to $\textbf{e}_1$.</span>
 <span id="cb4-529"><a href="#cb4-529" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-530"><a href="#cb4-530" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
-<span id="cb4-531"><a href="#cb4-531" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-532"><a href="#cb4-532" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb4-533"><a href="#cb4-533" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-530"><a href="#cb4-530" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-531"><a href="#cb4-531" aria-hidden="true" tabindex="-1"></a><span class="fu"># References {.unnumbered}</span></span>
+<span id="cb4-532"><a href="#cb4-532" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-533"><a href="#cb4-533" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-534"><a href="#cb4-534" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
