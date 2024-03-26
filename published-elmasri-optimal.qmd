@@ -1,5 +1,5 @@
 ---
-title: Optimal projection for parametric importance sampling in high dimensions
+title: BUG Optimal projection for parametric importance sampling in high dimensions
 author:
   - name: Maxime El Masri
     affiliation: '[ONERA/DTIS](https://www.onera.fr/), [ISAE-SUPAERO](https://www.isae-supaero.fr/), [Université de Toulouse](https://www.univ-toulouse.fr/)'
@@ -484,10 +484,11 @@ table=[["D'",Tabresult[0,0],Tabresult[0,1],Tabresult[0,2],Tabresult[0,3],
 
 Markdown(tabulate(
   table, 
-  headers=["", r"$\mathbf{\Sigma}^*$", r"$\widehat{\mathbf{\Sigma}}^*$", r"$\widehat{\mathbf{\Sigma}}_{opt}$",
+  headers=["", r"$\mathbf{\Sigma}^*$", r"$\widehat{\mathbf{\Sigma}}^*$",
+	   r"$\widehat{\mathbf{\Sigma}}_{opt}$",
            r"$\widehat{\mathbf{\Sigma}}_\text{mean}$", r"${\widehat{\mathbf{\Sigma}}^{+d}_{opt}}$",
            r"$\widehat{\mathbf{\Sigma}}^{+d}_{mean}$", "vMFN"],
-    tablefmt="pipe"))
+  tablefmt="latex"))
 ```
 
 ##  Test case 2: projection in 2 directions   {#sec-sub:parabol}	
