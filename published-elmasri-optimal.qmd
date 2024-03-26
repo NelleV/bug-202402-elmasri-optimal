@@ -29,7 +29,7 @@ date: 11/03/2024
 date-modified: last-modified
 draft: false
 published: false
-google-scholar: true
+google-scholar: false
 citation:
   type: article-journal
   container-title: "Computo"
